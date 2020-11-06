@@ -1,0 +1,3 @@
+[submodule "eko-world"]
+	path = eko-world
+	url = https://github.com/eurocodes/eco-mob.git
