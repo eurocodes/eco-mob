@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'react-native';
 import styled from 'styled-components';
 import Fontisto from '@expo/vector-icons/Fontisto';
@@ -10,6 +10,12 @@ const PinScreen = ({ navigation }) => {
 
     const [pinCount, setPinCount] = useState(0);
     const totalPin = 6;
+
+    useEffect(() => {
+        if (pinCount === totalPin) {
+            navigation.navigate("Tabs")
+        }
+    }, [pinCount])
 
     const renderPin = () => {
         const pins = [];
